@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+</head>
+<body>
+    
+
+    <div class="main">
+       
+        <input type="text" id="input">
+        <button id="add">Add</button>
+    </div>
+</br>
+<div class="todoItems">
+    <h1>Todo Items</h1>
+    <ol id ="OlItem">
+    
+    </ol>
+</div>
+<script>
+    
+    var add = document.getElementById("add");
+    add.addEventListener("click",function(){
+        var input = document.getElementById("input").value;
+        var text =document.createTextNode(input);
+       var li = document.createElement("li");
+       var ol = document.getElementById("OlItem");
+       li.appendChild(text);
+       ol.appendChild(li);
+
+       document.getElementById("input").value="";
+
+    })
+    
+
+
+
+
+</script>
+</body>
+</html>
